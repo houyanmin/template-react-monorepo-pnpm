@@ -8,14 +8,14 @@ react+monorepo仓库模版
 * beta -> latest 对外使用的包，需要经过公测阶段，稳定后才可以发布为正式的 latest 版本。
 * (alpha/beta) -> next -> latest 大的 major 主版本变化的版本，需要先经历测试后才能发布为稳定的 next 版本，等生态或周围的项目影响度最低的时候，再发布为正式的 latest 版本。
 ### changeset 管理版本
-作为 pnpm 的 monorepo 仓库，包之间的互相引用是使用的 workspace 规则，譬如 xform 依赖 "@xm/xutil": "workspace:^1.0.3"，此时包的发布必须使用 pnpm publish 才能将 workspace 版本规则替换为正确版本。
+作为 pnpm 的 monorepo 仓库，包之间的互相引用是使用的 workspace 规则，譬如 A 依赖 "@xx/util": "workspace:^1.0.3"，此时包的发布必须使用 pnpm publish 才能将 workspace 版本规则替换为正确版本。
 
 所以，不能使用 changeset publish 来发布包。
 
 另外，由于 changeset 管理 prelease 版本只有一个全局状态控制，当进入 prelease 模式后所有包都只能发布 pre 版本。
 
 ### 工作流程
-![file-list](workflow.png)
+![workflow-image](workflow.png)
 
 需要有一个主干分支用来将测试版本的包发布为正式版本，对应包自己的测试版本需要单独拉分支去发包。
 
