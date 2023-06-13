@@ -1,0 +1,12 @@
+{
+  "name": "demo",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "lint": "echo `this is lint`"
+  },
+  "keywords": [],
+  "author": "yangming",
+  "license": "ISC"
+}
