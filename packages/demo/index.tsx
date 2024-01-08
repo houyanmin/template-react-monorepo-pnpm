@@ -17,5 +17,5 @@ export default function App() {
     }, 1000)
   }, [])
 
-  return <div>{num}</div>
+  return <div>计数：{num}</div>
 }
